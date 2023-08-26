@@ -169,12 +169,140 @@ int main() {
 
 
 
+/*
+
+when we write if statements it is not mandatory to write else statements.
+if
+else if
+else
+
+// nested if else condition
+
+*/
+
+
+
+/*
+
+// Write a program that takes an input of age
+// and prints if you are adult or not
+// >= 18, yes
+// < 18, no
+
+
+// A school has following rules for grading system:
+// a. Below 25 - F
+// b. 25 to 44 - E
+// C. 45 to 49 - D
+// d. 50 to 59 - C
+// e. 60 to 79 - B
+// f. 80 to 100 - A
+// Ask user to enter marks and print the corresponding grade.
+
+-in marks type problem, we're using multiple (if - &&) , (else if not use &&) 
+- marks < 25
+- marks <= 44
+- marks <+ 55
+- assending order
+
+
+// Take the age from the user and then decide accordingly
+// 1. If age < 18, print-> not eligible for job
+// 2. If age >= 18,
+// print-> "eligble for job"
+// 3. If age >= 55 and age <= 57,
+// print-> "eligible for job, but retirement soon."
+// 4. If age > 57
+// print-> "retirement time"
+
+*/
+
+
+
+
+
+//-----------------------------------SWITCH------------------------------------
+
+
+
+
+
+/*
+
+- in switch statement its stats from the case and continue to the end, thats where "break;".
+
+- break statements  - it breaks out all the conditional statements that we have written, -case, -switch.
+                    - default:
+
+*/
+
+
+
+
+
+//-----------------------------------Arrays------------------------------------
+
+
+
+
+
+/*
+
+- When we use array - when we have same/similay dataTypes being stored myltiple times.
+- int a, b, c, d;
+- cin >> a >> b >> c >> d;
+    takes lots of efforts thats where array comes.
+
+- array elements are stored in consecutive memory address but i am not sure where the first one is,
+    it can be at any randomized location.
+
+*/
+
+
+/*
+
 #include<bits/stdc++.h>
 using namespace std;
 
 int main(){
+// 1-D Array
+    int arr[5];
 
-    cout<<"helo ";
-    
+    cin >> arr[0] >> arr[1] >> arr[2] >> arr[3] >> arr[4];
+
+    arr[2] += 10;   //modified the array YES
+
+    cout<< arr[2];
+
+    //long long ar[3];
+
+
+// 2-D Array     -    matrix problem , graphs problem   -  0 Zero based indexing.
+    int a[3][5]; 
+    //[row][column]
+    a[1][3] = 69;
+    cout << a[1][3];
+
     return 0;
 }
+
+*/
+
+
+
+
+
+
+//-----------------------------------String------------------------------------
+
+
+
+
+
+
+/*
+
+
+
+*/
+
