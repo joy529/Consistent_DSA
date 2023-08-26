@@ -259,6 +259,7 @@ else
 */
 
 
+
 /*
 
 #include<bits/stdc++.h>
@@ -302,7 +303,158 @@ int main(){
 
 /*
 
-
+- string also stores every charactere in term of indexes.
+    first index is the zero index  
 
 */
 
+
+
+/*
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    string s = "Joy";
+    int len = s.size();     //length() function is also there in c++
+    cout << len << endl;
+
+    //these are characters , and these characteres are add makes up a string
+    s[len-1] = 'b';     // if we do "b" it will give ERROR we have to assign as character (' ')
+    cout << s[len - 1];     //last index print
+
+    return 0;
+}
+
+*/
+
+
+
+
+
+//-----------------------------------For Loop----------------------------------
+
+
+
+
+
+/*
+
+for(initialization ; condition ; updation){
+    body of loop
+    }
+
+- variable declaration only get executed for the first iteration
+- initialization -> codition -> body of loop -> updation
+- how many times i have to run the loop that's matter
+
+*/
+
+
+
+
+
+//--------------------------------While Loop-----------------------------------
+
+
+
+
+
+/*
+
+- check -> print -> increase.
+
+*/
+
+
+
+
+
+//---------------------------------Do While Loop-------------------------------
+
+
+
+
+
+/*
+
+- do it for the first go ahead->
+    first time it get executed... irrespective of what condition are givern.
+
+*/
+
+
+
+
+
+//---------------------------------Function------------------------------------
+
+
+
+
+
+/*
+
+// Functions are set of code which performs something for you
+// Functions are used to modularise code
+// Functions are used to increase readability
+// Functions are used to use same code multiple times
+// void -> which does not returns anything
+// return -> flow will go to the function()
+// parameterised
+// non parameterised
+
+*/
+
+
+
+
+
+//-------------------------Pass by Value and Reference------------------------- 
+
+
+
+
+
+/*
+
+value -> copy goes (original memory did not go)
+        - function took the copy and did everything with the copy
+        - original value still the same
+
+reference -> make changes to the original one, 
+            - attach & to it,
+            - it takes the address,
+            - it takes the original
+
+*/
+
+// Array allways goes with reference.
+// -vector, map, list not.
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void doSomething(int arr[], int n){
+    arr[0] += 100;
+    cout << "Value inside function: " << arr[0] << endl;
+}
+
+int main(){
+
+    int n = 5;
+    int arr[n];
+    for(int i = 0; i<n; i = i+1){
+        cin >> arr[i];
+    }
+
+    doSomething(arr, n);
+
+    cout<< "Value inside int main: " << arr[0] << endl;
+
+    return 0;
+}
