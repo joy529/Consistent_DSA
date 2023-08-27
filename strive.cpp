@@ -435,6 +435,7 @@ reference -> make changes to the original one,
 // -vector, map, list not.
 
 
+/*
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -458,3 +459,69 @@ int main(){
 
     return 0;
 }
+
+*/
+
+
+
+
+
+//------------------------------Time Complexity--------------------------------
+
+
+
+
+
+/*
+
+
+
+*/
+
+
+
+
+
+//----------------------------------Patterns-----------------------------------
+
+
+
+
+
+/*
+
+- master the Loops
+nested loops
+1 outer loop - rows - count the no. of lines
+2 inner loop - column - &connect somehow to the rows
+3 print inside the inner for loop
+4 observe symmetry [optional]
+
+*/
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void print1(int n){
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            cout << "* ";
+        }
+        cout << endl; 
+    }
+}
+
+
+int main() {
+    int t;
+    cin >> t;
+    for(int i = 0; i < t; i++) {
+        int n;
+        cin >> n;
+        print1(n);
+    }
+
+    return 0;
+}
+
