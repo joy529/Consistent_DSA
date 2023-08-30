@@ -536,14 +536,6 @@ void print2(int n) {
 
 
 
-void print3(int n){
-    for (int i = 0; i < n; i++) {
-        
-    }
-    
-}
-
-
 
 int main() {
     int t;      //how the backend looks, no. of test cases - t
