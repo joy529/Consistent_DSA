@@ -503,6 +503,12 @@ nested loops
 #include <bits/stdc++.h>
 using namespace std;
 
+
+// * * * * 
+// * * * * 
+// * * * * 
+// * * * * 
+
 void print1(int n){
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < n; j++) {
@@ -513,15 +519,44 @@ void print1(int n){
 }
 
 
+
+// * 
+// * * 
+// * * * 
+// * * * *
+
+void print2(int n) {
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j <= i; j++) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+
+
+void print3(int n){
+    for (int i = 0; i < n; i++) {
+        
+    }
+    
+}
+
+
+
 int main() {
-    int t;
+    int t;      //how the backend looks, no. of test cases - t
     cin >> t;
     for(int i = 0; i < t; i++) {
-        int n;
+        int n;      //input for how many stars.
         cin >> n;
-        print1(n);
+        print2(n);
     }
 
     return 0;
 }
+
+
+
 
