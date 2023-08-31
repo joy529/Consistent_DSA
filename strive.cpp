@@ -19,6 +19,9 @@
 
 -skeleton of the code
 
+islower()
+isupper()
+
 */
 
 
@@ -548,6 +551,27 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+//----------------------------------Fibonacci----------------------------------
+
+
+
+
+
+// - https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
+
+// - https://www.geeksforgeeks.org/check-number-fibonacci-number/?ref=lbp
+
+
+
+
+
+//------------------------------------STL--------------------------------------
+
 
 
 
