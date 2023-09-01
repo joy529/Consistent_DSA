@@ -1053,3 +1053,50 @@ void explainMap(){
     // erase, swap, size, empty, are same as above...
 
 }
+
+
+
+
+
+//--------------MultiMap
+
+
+
+
+
+void explainMultimap() {
+    //everything same as map,  only it can store multiple keys. - duplicates keys
+
+    // only mpp[key] cannnot be used here
+
+    // log n
+}
+
+
+
+
+
+//--------------UnorderedMap
+
+
+
+
+
+
+void explainUnorderedMap() {
+
+    // same as set and unordered_Set difference...
+
+    // unique - keys...     -> randomized       -> not duplicate
+
+    // unsorted...
+
+    //TC: almost all cases constant time - O(1),   
+    // worst case: O(n) - once in a blue moon
+}
+
+
+
+
+
+
