@@ -883,3 +883,173 @@ void explainPQ() {
 
 
 
+//--------------SET
+
+
+
+
+
+void explainSet() {
+
+// -stores everything in the sorted order       sorted
+// -stores Unique       unique
+// -tree ds
+
+// in SET everything happens in logarithmic time complexity -   (log n)
+
+// find(), insert(), count(), erase()   -   imp. func
+
+    set<int> st;
+    st.insert(1);
+    st.emplace(2);
+    st.insert(2);   // x
+    st.insert(4);
+    st.insert(3);   //{1, 2, 3, 4}
+    //functionality of insert in vector,
+    // can be used also, that only increases
+    // efficiency
+
+    // begin(), end(), rbegin(), rend(), size()
+    // empty() and swap() are same as those of above
+
+    auto it = st.find(3);   //return an iterator rmember this returns an iterator which points to this 3.
+    //iterator - points to the address
+
+    //element is not there in the set then it return st.end()
+    auto it = st.find(6);   //-> st.end()
+
+    st.erase(5);    //delete 5 and maintain the sorted order
+
+    int cnt = st.count(1);      // exist = 1, not exist = 0
+
+    auto it = st.find(3);
+    st.erase(it)    //it take constant time
+
+
+    // {1, 2, 3, 4, 5}
+    auto it1 = st.find(2);
+    auto it2 = st.find(4);
+    st.erase(it1, it2);     // -> after erase {1, 4, 5}   [first, last)
+
+    // lower_bound() and upper_bound() function work in the same way, as in vector it does.
+
+    //this is the syntax
+    auto it = st.lower_bound(2);
+
+    auto it = st.upper_bound(3);
+
+            // -https://www.youtube.com/watch?v=edJ19qIL8WQ  (Lower Bound & Upper Bound) - YT explained.
+
+}
+
+
+
+
+
+
+//--------------Multiset
+
+
+
+
+
+void explainMultiSet() {
+
+    //everything is same as set
+    // only stores duplicate elements also
+
+    multiset<int> ms;
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1);
+
+    ms.erase(1);    // all 1's erased
+
+    int cnt = ms.count(1);
+
+    //find out the just first occurence of one...
+    ms.erase(ms.find(1));       //erase that iterator -> which is the address . 
+    ms.erase(ms.find(1), ms.find(1)+2);
+
+    //rest all the function same as set...
+
+}
+
+
+
+
+
+//--------------Unordered SET
+
+
+
+
+
+void explainUSet() {
+
+        // Lower_bound and Upper_bound function does NOT work , rest all the functions are same.
+        // TC: O(1),,,,, worst case O(1)->very rare,,,... once in a blue moon...
+
+        // as above, it does not stores in any particular order, it has a better complexity then set in most cases, except some when collision happens.
+
+
+
+    unordered_set<int> st;
+
+
+
+}
+
+
+
+
+
+//--------------Map
+
+
+
+
+
+void explainMap(){
+
+
+    //key value pair
+    // key - unique (key = roll no. , value = name) in sorted order...      something similar to set ds.
+    // -> key, value -  can be of any DataType
+
+
+    map<int, int> mpp;
+
+    mpp[1] = 2;
+    mpp.emplace({3, 1});    // 3 = key, 1 = value
+    mpp.insert({2,4});
+
+    map<int, pait<int, int>> mpp;
+
+
+
+    map< pait<int, int>, int> mpp;
+    mpp[{2,3}] = 10;        // {2,3} = key, 10 = value
+
+
+
+    for(auto it : mpp) {
+        cout << it.first << " " << it.second << endl;
+    }
+
+
+    cout << mpp[1];     // print the value
+    cout << mpp[5];     // 0 / NULL     ->      does not exist
+
+
+    auto it = mpp.find(3);
+    cout << *(it).second;   // value
+
+    auto it = mpp.find(5);      // mpp.end() -> after the map... afterwards...
+
+    auto it = mpp.lower_bound(2);
+    auto it = mpp.upper_bound(3);
+
+    // erase, swap, size, empty, are same as above...
+
+}
