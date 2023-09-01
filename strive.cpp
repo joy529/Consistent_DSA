@@ -1168,6 +1168,104 @@ void explainExtra() {
 
     int mini = *min_element(a, a+n);
 
+
+
+
+
+
+    // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~      Binary Search function inbuilt 
+
+    A[] = {1, 4, 5, 8, 9};
+
+    bool res = binary_search(a, a+n, 3);
+
+    bool res = binary_search(a, a+n, 4);
+
+
+
+    // lower_bound is that STL which return the first element if its occure, and if is doesn't occures, then it will the iterator pointing to the element which is immediate next greater than of the given element.
+    a[] = {1, 4, 5, 9, 9};
+
+    int ind = lower_bound(a, a+n, 4) - a;   // index of 1
+    int ind = lower_bound(a, a+n, 7) - a;   // index of 4
+    int ind = lower_bound(a, a+n, 10) - a;   // index of 6
+
+
+    int ind = lower_bound(a.begin(), a.end(), a) - a.begin();
+
+
+
+
+
+    //upper_bound -> it will always the iterator pointing to the element which is immediate next greater than of the given element.
+    a[] = {1, 4, 5, 9, 9};
+    //TC; log n
+
+    int ind = upper_bound(a, a+n, 4) - a;   // return for 5
+    int ind = upper_bound(a, a+n, 7) - a;   // return for 9
+    int ind = upper_bound(a, a+n, 10) - a;   // return for end -> point to an iterator which is greater than 10.
+
+
+    int ind = upper_bound(a.begin(), a.end(), a) - a.begin();
+
+
+
+    /*
+    
+Q. Find the first occurrence of a X in a sorted array. If it does not exits, print -1.
+A[] = {1, 4, 4, 4, 4, 9, 9, 10, 11}
+int ind = lower_bound(a, a+n, X) - a;
+if(ind != n && a[ind] == X) cout << ind; 
+else cout << -1;
+X = 4       // return index which is 1
+× = 2    // -1
+X = 12  // -1
+
+            // -> think all about the edge cases "ind != n" when we use LB and UB.
+
+
+Q. Find the smallest number greater than X in a sorted array. If no number exists print -1.
+A[] = {1, 4, 4, 4, 4, 9, 9, 10, 11}
+int ind = upper_bound (a, a+n, X) - a;
+if(ind<n) cout << a [ind];
+else cout << -1;
+X= 4    //return 9
+× = 2   //return 4
+X = 1   //return 4
+X = 11  //return -1
+
+
+
+
+Q. Find the last occurrence of a X in a sorted array. If it does not exits, print -1.
+A[] = {1, 4, 4, 4, 4, 9, 9, 10, 11}
+int ind = upper_bound(a, a+n, X) - a;
+ind--;
+if (ind ›= 0 && a[ind] == X) cout << ind; 
+else cout << -1;
+X = 4   //print the index
+X = 2   // x - this no. doesn't exist
+X  = 0  // x - this no. doesn't exist
+
+
+
+
+Q. Find the largest number smaller than X in a sorted array. If no number exists print -1.
+A[] = {1, 4, 4, 4, 4, 9, 9, 10, 117
+int ind = lower_bound(a, a+n, X) - а:
+ind--;
+if(ind>=0) cout << a[ind];
+else cout << -1;
+X = 4       // return 1
+X = 2       // return 1
+X= 1        // -1  doesn't exit smaller element than x
+
+    
+    */
+
+
+
+
 }
 
 
@@ -1208,6 +1306,9 @@ Chapters:
 01:06:40 min_element
 01:07:09 SUBSCRIBE !!!
 */
+
+
+
 
 
 
