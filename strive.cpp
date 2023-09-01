@@ -22,6 +22,8 @@
 islower()
 isupper()
 
+M_PI
+
 */
 
 
@@ -634,7 +636,7 @@ void explainVector() {
     vector<int> v;
 
     v.push_back(1);
-    v.emplace_back(2);
+    v.emplace_back(2);  //fast
 
     vector<pair<int, int>> vec;
 
@@ -681,8 +683,39 @@ void explainVector() {
     for (auto it : v) {
         cout << it << " ";
     }
-    
-    
 
+        //erase
+    
+    v.erase(v.begin()+1);   // {10, 20, 12, 23}    ->   {10, 12, 23}
+
+    v.erase(v.begin() + 2, v.begin() + 4);  //{10, 20, 12, 23, 35} -> {10, 20, 35} [start, end]
+
+        //insert function
+
+    vector<int> v(2, 100);  //{100, 200}
+    v.insert(v.begin(), 300);   //{300, 100, 100}
+    v.insert(v.begin() + 1, 2, 10);     //{300, 10, 10, 100, 100}
+
+    vector<int> copy(2, 50); //{50, 50}
+    v.insert(v.begin(), copy.begin(), copy.end());  //{50, 50, 300, 10, 10, 100, 100}
+
+    cout << v.size();   //{10, 20} -> 2
+
+    v.pop_back();      // {10} 
+
+    //v1 -> {10, 20}
+    //v2 -> {30, 40}
+    v1.swap(v2);    //v1->{30, 40} , v2->{10, 20}
+
+    v.clear();  //erase the entire vector, trims it down to a empty vector.
+
+    cout << v.empty();
+    // 1 -> false, is not empty
+    // 0 -> True,  is empty
+    
 }
+
+
+
+
 
