@@ -1100,3 +1100,114 @@ void explainUnorderedMap() {
 
 
 
+
+//-------------------<<<< Algorithm >>>>
+
+
+
+
+
+bool comp(pair<int, int> p1, pair<int, int> p2) {
+    if(p1.second < p2.second) return true;
+    if(p1.second > p2.second) return false;
+
+    if(p1.first > p2.first) return true;
+    return false;
+}
+
+
+
+
+
+void explainExtra() {
+
+        //sort
+        //  ->all the containers,, not the map... mainly "vector". "Array"
+
+    sort(a, a+n);
+    sort(v.begin(), b.end());       // [ )
+
+    sort(a+2, a+4);
+
+
+
+    // sort in dexcending order
+    sort(a, a+n, greater<int>);     // inbuilt comparator.
+
+
+
+    pair<int, int> a[] = {{1,2}, {2,1}, {4,1}};         
+            //sort in according to second element
+            //if second element is same, then sort
+            //it according to first element but in descending
+
+    sort(a, a+n, comp)          //comp - self written comparator - Boolean function
+    // {4,1}, {2,1}, {1,2}
+    
+
+    
+//how many ones are there 11111 or how many set bits are there
+    int num = 7;
+    int cnt = __builtin_popcount();
+
+    long long num = 12312313113;
+    int cnt = __builtin_popcountll();
+
+
+
+
+    string s = "123";       // 3! - 3 factorial-formula
+    sort(s.begin(), s.end());   //first we have to sort,,, if we have to print all the permutations...
+
+    do {
+        cout << s << endl;
+    } while(next_permutation(s.begin(), s.end()));
+
+
+    int maxi = *max_element(a, a+n);
+
+    int mini = *min_element(a, a+n);
+
+}
+
+
+
+
+/*
+Chapters:
+00:01:02 Libraries
+00:01:51 namespace std
+00:02:40 Functions
+00:05:08 STL
+00:05:40 pair <int, int>
+00:10:04 vectors                                           ( 1st container )
+00:15:25 accessing elements in vector
+00:19:28 iterators
+00:24:43 deletion in a vector
+00:27:00 insertion in a vector
+00:29:46 other functions in vector
+00:30:26 list                                                     ( 2nd container )
+00:31:43 Deque                                                       ( 3rd container )
+00:32:02 Stack (LIFO)                                                     ( 4th container )
+00:34:16 Time Complexity of stack operations
+00:34:27 Queue (FIFO)                                                    ( 5th container )
+00:35:58 Priority Queue                                                  ( 6th container )
+00:38:28 Time Complexity of push, pop & top
+00:38:50 Set                                                                      ( 7th container )
+00:42:58 Lower bound & Upper bound
+00:43:40 Multiset                                                             ( 8th container )
+00:45:35 Unordered set                                                  ( 9th container )
+00:47:12 Map                                                                   ( 10th container )
+00:53:22 Multimap                                                          ( 11th container )
+00:53:46 Unordered map                                               ( 12th container )
+00:54:53 Algorithms - Sort
+00:59:18 Comp (For sorting)
+01:03:26 builtin_popcount( )
+01:04:18 next_permutation
+01:06:21 max_element
+01:06:40 min_element
+01:07:09 SUBSCRIBE !!!
+*/
+
+
+
