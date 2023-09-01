@@ -751,3 +751,135 @@ void explainList() {
 
 
 
+//--------------Deque
+
+
+
+
+
+void explainDeque() {
+
+    deque<int> dq;
+
+    // all the things are same.
+
+}
+
+
+
+
+
+//--------------Stack
+
+
+
+
+
+void explainStack() {
+
+// L I F O
+// push     pop     top
+// all the ooperations are TC: O(1) - everuthing happens in constant time.
+
+    stack<int> st;
+    st.push(1);     // {1}
+    st.push(2);     // {2, 1}
+    st.push(3);     // {3, 2, 1}
+    st.push(4);     // {4, 3, 2, 1}
+    st.emplace(5);  // {5, 4, 3, 2, 1}
+
+    cout << st.top();   //print 5  " st[2] is invalid "
+
+    st.pop();       // st looks like {4, 3, 2, 1}
+
+    cout << st.top();
+
+    cout << st.size();
+
+    cout << st.empty();
+
+    stack<int> st2;
+
+    st1.swap(st2);
+
+}
+
+
+
+
+
+//--------------Queue
+
+
+
+
+
+void explainQueue() {
+
+// F I F I
+
+    queue<int> q;
+    q.push(1);
+    q.push(2);
+    q.emplace(4);
+
+    q.back() += 5;
+
+    cout << q.front();
+
+    q.pop();
+
+    cout << q.front();
+
+    // size, swap, empty same as stack.
+
+
+}
+
+
+
+
+
+//--------------Priority Queue
+
+
+
+
+
+void explainPQ() {
+
+// largest value stays at the top, lexicographically largest string
+// it is NOT a linear data structure - it is a Tree Data Structure.
+// push   top   pop
+// log n   O(1)  log n      <-//happenc TC:
+
+    priority_queue<int> pq;
+
+    pq.push(5);     //maximum Heap
+    pq.push(2);
+    pq.push(8);
+    pq.emplace(10);
+
+    cout << pq.top();
+
+    pq.pop();
+
+    cout << pq.top();
+
+// size, swap, empty func same as others
+
+    // Minimum Heap
+    priority_queue<int, vector<int>, greater<int>> pq;
+
+    pq.push(5);
+    pq.push(2);
+    pq.push(8);
+    pq.emplace(10);
+
+    pq.top();
+
+}
+
+
+
+
