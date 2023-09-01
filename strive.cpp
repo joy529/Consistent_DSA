@@ -719,3 +719,35 @@ void explainVector() {
 
 
 
+//--------------List
+
+
+
+
+
+
+void explainList() {
+
+// -main diff is front operation.
+// -insert func in vector is very costly.
+// -doubly linked list is maintained for a list
+// -single linked list is maintained for a vactor
+// -push_front is very very cheap in terms of time complexity wise as compare it to a vector
+
+    list<int> ls;
+
+    ls.push_back(2); 
+    ls.emplace_back(4);
+
+    ls.push_front(5);
+
+    ls.emplace_front(); 
+
+    //begin, end, rbegin, rend, clear, insert, size, swap
+
+}
+
+
+
+
+
