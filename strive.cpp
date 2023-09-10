@@ -501,7 +501,7 @@ nested loops
 2 inner loop - column - &connect somehow to the rows
 3 print inside the inner for loop
 4 observe symmetry [optional]
-
+ 
 */
 
 
@@ -1306,6 +1306,42 @@ Chapters:
 01:06:40 min_element
 01:07:09 SUBSCRIBE !!!
 */
+
+
+
+
+
+
+
+
+
+
+//------------------------------Basic Math-------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-----------------------------Recursion---------------------------------------
+
 
 
 
