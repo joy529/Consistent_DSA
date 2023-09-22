@@ -1324,12 +1324,19 @@ Chapters:
 
 
 
+/*
 
+Extraction of Digits
+Reversing a no.
+palindeome
+print all divisors
+mathematical observation
+sorting
+prime
+gdc  HCF
+Euclidean algoithm
 
-
-
-
-
+*/
 
 
 
@@ -1341,6 +1348,11 @@ Chapters:
 
 
 //-----------------------------Recursion---------------------------------------
+
+
+
+
+
 
 
 
