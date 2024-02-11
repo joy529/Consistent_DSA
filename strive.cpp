@@ -253,12 +253,12 @@
 
 // /*
 
-// - When we use array - when we have same/similay dataTypes being stored myltiple times.
+// - When we use aay - when we have same/similay dataTypes being stored myltiple times.
 // - int a, b, c, d;
 // - cin >> a >> b >> c >> d;
-//     takes lots of efforts thats where array comes.
+//     takes lots of efforts thats where aay comes.
 
-// - array elements are stored in consecutive memory address but i am not sure where the first one is,
+// - aay elements are stored in consecutive memory address but i am not sure where the first one is,
 //     it can be at any randomized location.
 
 // */
@@ -272,13 +272,13 @@
 
 // int main(){
 // // 1-D Array
-//     int arr[5];
+//     int a[5];
 
-//     cin >> arr[0] >> arr[1] >> arr[2] >> arr[3] >> arr[4];
+//     cin >> a[0] >> a[1] >> a[2] >> a[3] >> a[4];
 
-//     arr[2] += 10;   //modified the array YES
+//     a[2] += 10;   //modified the aay YES
 
-//     cout<< arr[2];
+//     cout<< a[2];
 
 //     //long long ar[3];
 
@@ -445,22 +445,22 @@
 // #include <bits/stdc++.h>
 // using namespace std;
 
-// void doSomething(int arr[], int n){
-//     arr[0] += 100;
-//     cout << "Value inside function: " << arr[0] << endl;
+// void doSomething(int a[], int n){
+//     a[0] += 100;
+//     cout << "Value inside function: " << a[0] << endl;
 // }
 
 // int main(){
 
 //     int n = 5;
-//     int arr[n];
+//     int a[n];
 //     for(int i = 0; i<n; i = i+1){
-//         cin >> arr[i];
+//         cin >> a[i];
 //     }
 
-//     doSomething(arr, n);
+//     doSomething(a, n);
 
-//     cout<< "Value inside int main: " << arr[0] << endl;
+//     cout<< "Value inside int main: " << a[0] << endl;
 
 //     return 0;
 // }
@@ -616,9 +616,9 @@
 
 //     cout << p.first << " " << p.second.second << " " << p.second.first;
 
-//     pair<int, int> arr[] = { {1, 2}, {2, 5}, {5, 1}};
+//     pair<int, int> a[] = { {1, 2}, {2, 5}, {5, 1}};
 
-//     cout << arr[1].second;
+//     cout << a[1].second;
 
 // }
 
@@ -1212,7 +1212,7 @@
 
 //     /*
     
-// Q. Find the first occurrence of a X in a sorted array. If it does not exits, print -1.
+// Q. Find the first occurrence of a X in a sorted aay. If it does not exits, print -1.
 // A[] = {1, 4, 4, 4, 4, 9, 9, 10, 11}
 // int ind = lower_bound(a, a+n, X) - a;
 // if(ind != n && a[ind] == X) cout << ind; 
@@ -1224,7 +1224,7 @@
 //             // -> think all about the edge cases "ind != n" when we use LB and UB.
 
 
-// Q. Find the smallest number greater than X in a sorted array. If no number exists print -1.
+// Q. Find the smallest number greater than X in a sorted aay. If no number exists print -1.
 // A[] = {1, 4, 4, 4, 4, 9, 9, 10, 11}
 // int ind = upper_bound (a, a+n, X) - a;
 // if(ind<n) cout << a [ind];
@@ -1237,7 +1237,7 @@
 
 
 
-// Q. Find the last occurrence of a X in a sorted array. If it does not exits, print -1.
+// Q. Find the last occurrence of a X in a sorted aay. If it does not exits, print -1.
 // A[] = {1, 4, 4, 4, 4, 9, 9, 10, 11}
 // int ind = upper_bound(a, a+n, X) - a;
 // ind--;
@@ -1250,7 +1250,7 @@
 
 
 
-// Q. Find the largest number smaller than X in a sorted array. If no number exists print -1.
+// Q. Find the largest number smaller than X in a sorted aay. If no number exists print -1.
 // A[] = {1, 4, 4, 4, 4, 9, 9, 10, 117
 // int ind = lower_bound(a, a+n, X) - а:
 // ind--;
@@ -1368,15 +1368,15 @@ using namespace std;
 
 
 
-// // Reverse of array using Recursion using one pointer
+// // Reverse of aay using Recursion using one pointer
 
-// void f(int i, int arr[], int n) {
+// void f(int i, int a[], int n) {
 
 //     if(i >= n/2) return;
 
-//     swap(arr[i], arr[n-i-1]);
+//     swap(a[i], a[n-i-1]);
 
-//     f(i+1, arr, n);
+//     f(i+1, a, n);
 // }
 
 
@@ -1387,12 +1387,12 @@ using namespace std;
 //     int n;
 //     cin >> n;
 
-//     int arr[n];
-//     for(int i = 0; i < n; i++) cin >> arr[i];
+//     int a[n];
+//     for(int i = 0; i < n; i++) cin >> a[i];
 
-//     f(0, arr, n);
+//     f(0, a, n);
 
-//     for(int i = 0; i < n; i++) cout << arr[i] << " ";
+//     for(int i = 0; i < n; i++) cout << a[i] << " ";
 
 
 //     return 0;
@@ -1484,15 +1484,15 @@ using namespace std;
 
 //     int n;
 //     cin >> n;
-//     int arr[n];
+//     int a[n];
 //     for(int i = 0; i<n; i++){
-//         cin >> arr[i];
+//         cin >> a[i];
 //     }
 
 //     // precompute 
 //     int hash[13] = {0};
 //     for(int i = 0; i<n; i++) {
-//         hash[arr[i]] += 1;
+//         hash[a[i]] += 1;
 //     }
 
 
@@ -1564,15 +1564,15 @@ using namespace std;
 
 //     int n;
 //     cin >> n;
-//     int arr[n];
+//     int a[n];
 //     for (int i=0 ; i<n ; ++i) {
-//         cin>>arr[i];
+//         cin>>a[i];
 //     }
 
 //     // pre - compute
 //     map<int, int> mpp;
 //     for(int i = 0; i<n; i++) {
-//         mpp[arr[i]]++;
+//         mpp[a[i]]++;
 //     }
 
 //     // iterate in the MAP
@@ -1630,12 +1630,12 @@ using namespace std;
 // Selection Sort
 
 
-
+//select min...
 
 
 int main() {
 
-
+    cout << "hello" << endl;
 
     return 0;
 }
