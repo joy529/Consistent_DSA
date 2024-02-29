@@ -1359,6 +1359,7 @@
 
 #include <bits/stdc++.h>
 #include <iostream>
+
 using namespace std;
 
 
@@ -1894,7 +1895,7 @@ int main()
 
 // Array 
 // Largest element in an array
-
+/*
 int findLargestElement(int arr[], int n) {
  
   int max = arr[0];
@@ -1916,4 +1917,214 @@ int main() {
   max = findLargestElement(arr2, n);
   cout << "The largest element in the array is: " << max<<endl;
   return 0;
+}
+*/
+
+
+/*
+// Second Largest Element in Array
+
+int secondLargest(int arr[],int n)
+{
+	if(n<2)
+	return -1;
+    int large = INT_MIN, second_large = INT_MIN;
+    int i;
+    for (i = 0; i < n; i++) 
+    {
+        if (arr[i] > large) 
+        {
+            second_large = large;
+            large = arr[i];
+        }
+ 
+        else if (arr[i] > second_large && arr[i] != large) 
+        {
+            second_large = arr[i];
+        }
+    }
+    return second_large;                
+}
+
+int main() {
+    int arr[]={1,2,4,7,7,5};  
+    int n=sizeof(arr)/sizeof(arr[0]);
+        // int sS=secondSmallest(arr,n);
+        int sL=secondLargest(arr,n);
+    // cout<<"Second smallest is "<<sS<<endl;
+    cout<<"Second largest is "<<sL<<endl;
+    return 0;
+}
+*/
+
+
+// Check array is sorted or Not
+/*
+bool isSorted(int arr[], int n) {
+   for (int i = 1; i < n; i++) {
+    if (arr[i] < arr[i - 1])
+      return false;
+  }
+
+  return true;
+}
+
+int main() {
+
+  int arr[] = {1, 2, 3, 6, 5}, n = 5;
+
+  printf("%s", isSorted(arr, n) ? "True" : "False");
+
+    // cout << isSorted(arr, n) << endl;
+
+}
+*/
+
+
+// Remove Duplicates in-place from sorted array
+/*
+int removeDuplicates(int arr[], int n)
+{
+  int i = 0;
+  for (int j = 1; j < n; j++) {
+    if (arr[i] != arr[j]) {
+      i++;
+      arr[i] = arr[j];
+    }
+  }
+  return i + 1;
+}
+int main() {
+  int arr[] = {1,1,2,2,2,3,3};
+  int n = sizeof(arr)/sizeof(arr[0]);
+  int k = removeDuplicates(arr, n);
+  cout << "The array after removing duplicate elements is " << endl;
+  for (int i = 0; i < k; i++) {
+    cout << arr[i] << " ";
+  }
+
+}
+*/
+
+
+// Left Rotate the Array by One
+/*
+void leftRotateBu1(int arr[], int n){
+    int temp = arr[0];
+    for(int i = 1; i<n; i++){
+        arr[i-1] = arr[i];
+    }
+    arr[n-1] = temp;
+
+    for(int i = 0; i<n; i++){
+        cout << arr[i] << " ";
+    }
+}
+
+int main(){
+
+    int n = 5;
+    int arr[] = {1, 2, 3, 4, 5};
+
+    leftRotateBu1(arr, n);
+
+    return 0;
+}
+*/
+
+
+// Left rotate an array by D places
+/*
+void leftRotate(int arr[], int n, int d) {
+
+    if (n == 0) return;
+
+    // Get the effective number of rotations:
+    d = d % n;
+
+    //step 1:
+    reverse(arr, arr + d);
+
+    //step 2:
+    reverse(arr + d, arr + n);
+
+    //step 3:
+    reverse(arr, arr + n);
+}
+
+int main()
+{
+    int n = 7;
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int d = 3;
+
+    cout << "Before rotation:" << endl;
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+
+    leftRotate(arr, n, d);
+    cout << "After rotation:" << endl;
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+    return 0;
+}
+*/
+
+// Binary Search
+//      must be sorted 
+/*
+// Iterative Implementation
+int binarySearch(vector<int>& nums, int target) {
+    int n = nums.size(); //size of the array
+    int low = 0, high = n - 1;
+
+    // Perform the steps:
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (nums[mid] == target) return mid;
+        else if (target > nums[mid]) low = mid + 1;
+        else high = mid - 1;
+    }
+    return -1;
+}
+
+int main()
+{
+    vector<int> a = {3, 4, 6, 7, 9, 12, 16, 17};
+    int target = 6;
+    int ind = binarySearch(a, target);
+    if (ind == -1) cout << "The target is not present." << endl;
+    else cout << "The target is at index: " << ind << endl;
+    return 0;
+}
+*/
+
+// Recursive Approach
+int binarySearch(vector<int>& nums, int low, int high, int target) {
+
+    if (low > high) return -1; //Base case.
+
+    // Perform the steps:
+    int mid = (low + high) / 2;
+    if (nums[mid] == target) return mid;
+    else if (target > nums[mid])
+        return binarySearch(nums, mid + 1, high, target);
+    return binarySearch(nums, low, mid - 1, target);
+}
+
+int search(vector<int>& nums, int target) {
+    return binarySearch(nums, 0, nums.size() - 1, target);
+}
+
+int main()
+{
+    vector<int> a = {3, 4, 6, 7, 9, 12, 16, 17};
+    int target = 6;
+    int ind = search(a, target);
+    if (ind == -1) cout << "The target is not present." << endl;
+    else cout << "The target is at index: "
+                  << ind << endl;
+    return 0;
 }
